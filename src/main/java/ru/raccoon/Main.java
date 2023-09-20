@@ -10,7 +10,7 @@ public class Main {
         Logger logger = Logger.getInstance();
         Scanner scanner = new Scanner(System.in);
         List<Integer> source = new ArrayList<>();
-        List<Integer> result = new ArrayList<>();
+
         Random random = new Random();
 
         logger.log("Запуск программы.");
@@ -34,7 +34,7 @@ public class Main {
         logger.log("Просим пользователя ввести входные данные для фильтрации.");
         System.out.print("Введите порог для фильтра: ");
         Filter filter = new Filter(scanner.nextInt());
-        result = filter.filterOut(source);
+        List<Integer> result = filter.filterOut(source);
 
         logger.log("Прошло фильтр " + result.size() + " элементов из " + source.size());
         logger.log("Выводим результат на экран");
